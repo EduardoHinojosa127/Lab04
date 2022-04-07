@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="utf-8">
+    <title>Casa de Cambio</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script type="text/javascript">
+        function cambiar(){
+            var num1=parseInt(document.getElementById("monto").value);
+            var resultado=0;
+            var dolar=3.7;
+            var euro=4.04;
+            if(document.getElementById("dolar").checked){
+                resultado=num1/dolar;
+                alert('El cambio de soles a dolares es: '+resultado.toFixed(2));
+            }
+            else if(document.getElementById("euro").checked){
+                resultado=num1/euro;
+                alert('El cambio de soles a euros es: '+resultado.toFixed(2));
+            }
+            else{
+                alert('Completa los campos');
+            }
+        }
+    </script>
 </head>
 <body>
-    <p>Holaaa</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Distinctio consequuntur suscipit totam quaerat odit earum explicabo 
-        labore harum reiciendis officiis ab, possimus dolorem itaque adipisci pariatur vero 
-        laboriosam. Repudiandae, perspiciatis.
-    </p>
+    
+    <h1>Casa de cambio</h1>
+    <form class="form">
+        <p>Seleccione moneda a enviar:</p>
+        <input type="radio" name="Dolar" id="dolar">Dólar
+        <input type="radio" name="Dolar" id="euro">Euro
+        <br>
+        <p>Ingrese su monto:</p>
+        <input type="number" name="Monto" id="monto">
+        <br><br>
+        <input type="button" name="" value="Cotizar" class="button" onclick="cambiar()">
+    </form>
 </body>
 </html>

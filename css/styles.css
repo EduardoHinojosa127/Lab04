@@ -1,0 +1,22 @@
+*{
+	color: gray;
+	font-family: 'calibri';
+
+}
+
+
+h1{
+	text-align: center;
+}
+
+form{
+	text-align: left;
+	position: relative;
+	margin-left: 40%;
+}
+
+}
+.button{
+	background: gray;
+	color: white;
+}
